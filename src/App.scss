@@ -1,0 +1,130 @@
+$background: #01161E;
+$highlight: #031C26 ;
+$alt-high: #598392;
+$cool: #aec3b0;
+$light: #eff6e0;
+
+html {
+  background-color: $background;
+}
+
+.App {
+  text-align: center;
+
+  .header {
+    font-family: 'Roboto';
+    color: $light;
+  }
+
+.picker {
+  margin-top: 4px;
+  margin-left: 4px;
+  font-family: 'Roboto Slab';
+  font-size: 24px;
+  height: 52px;
+  background-color: $background;
+  color: white;
+  border-radius: 0;
+}
+
+#month-picker {
+  width: 160px;
+  border-radius: 0px;
+}
+
+  .search-bar {
+    font-family: 'Roboto Slab';
+    height: 52px;
+    background-color: $background;
+    color: white;
+    border: 1px solid $cool;
+    font-size: 24px;
+
+    &:focus {
+      outline: none;
+
+    &:hover {
+      border: 1px solid $light;
+    }
+    }
+  }
+
+  #submit-button {
+    font-family: 'Roboto';
+    font-weight: bold;
+    color: $background;
+    vertical-align: top;
+    margin-left: 10px;
+    height: 56px;
+    background-color: $cool;
+    border: 1px solid $cool;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: $light;
+    }
+  }
+
+#track-wrapper {
+  margin: auto;
+  margin-top: 40px;
+  padding-left: 0px;
+  width: 700px;
+  height: 600px;
+  border: 1px solid $cool;
+  color: white;
+  font-family: 'Roboto';
+  font-size: 14px;
+  overflow: scroll;
+  ul {
+    list-style-type: none;
+    text-align: left;
+    padding-left: 0px;
+    li {
+        border-bottom: 1px solid $cool;
+
+    }
+  }
+
+.track-item {
+  height: 36px;
+  display: grid;
+  grid-template-columns: 6px 50px 150px auto;
+  img {
+    vertical-align: top;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .track-date {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    margin-top: 7px;
+  }
+  .track-text {
+    grid-row-start: 1;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    text-align: left;
+    margin-top: 7px;
+    overflow-x: scroll;
+  }
+}
+
+li.track-item:hover {
+  background-color: $highlight;
+}
+
+}
+
+  #another-day {
+    margin-top: 10px;
+    font-family: 'Roboto';
+    color: white;
+  }
+
+}
+
