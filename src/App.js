@@ -48,7 +48,7 @@ class App extends Component {
     event.preventDefault();
     console.log("Button Clicked!");
     this.setState({ tracks: [] });
-    let url = `http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${this.state.username}&api_key=6c81046f1210891db3f2f16a73a893c7&format=json`
+    let url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${this.state.username}&api_key=6c81046f1210891db3f2f16a73a893c7&format=json`
     for (let i = 0; i < this.state.timeStamps.length; i++) {
       fetch(url + "&from=" + (this.state.timeStamps[i] - 21600) + "&to=" + ((this.state.timeStamps[i] - 21600) + 86400))
         .then(res => {
