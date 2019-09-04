@@ -68,6 +68,7 @@ export default class DatePicker extends Component {
                         <option value="28">28</option>
                         <option value="29">29</option>
                         <option value="30">30</option>
+                        <option value="31">31</option>
                     </select>
                     <input id="submit-button" type="submit" value="Submit" />
                 </form>

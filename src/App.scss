@@ -6,7 +6,10 @@ $light: #eff6e0;
 
 html {
   background-color: $background;
+  font-size: 14px;
 }
+
+
 
 .App {
   text-align: center;
@@ -72,12 +75,11 @@ html {
   margin: auto;
   margin-top: 40px;
   padding-left: 0px;
+  max-width: 90%;
   width: 700px;
-  height: 600px;
   border: 1px solid $cool;
   color: white;
   font-family: 'Roboto';
-  font-size: 14px;
   overflow: scroll;
   ul {
     list-style-type: none;
@@ -128,3 +130,12 @@ li.track-item:hover {
 
 }
 
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 75%;
+  }
+
+  .track-item {
+    height: 28px;
+  }
+}
