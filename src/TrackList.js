@@ -32,6 +32,12 @@ class TrackList extends Component {
         return month;
     }
 
+    timeZoneFixer = (dateText) => {
+        let utcDate = Date.parse((dateText + "UTC"));
+        var localDate = new Date(utcDate);
+        return Date.parse(localDate);
+    }
+
     render() {
         let myTracks = (this.props.tracks);
         let trackArray = [];
@@ -56,7 +62,7 @@ class TrackList extends Component {
                     {result.map((track) => {
                         return <TrackItem
                             image={track.image[1]["#text"]}
-                            date={track.date["#text"]}
+                            date={this.timeZoneFixer(track.date["#text"])}
                             artist={track.artist["#text"]}
                             name={track.name} />
                     })}
