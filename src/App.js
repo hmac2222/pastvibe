@@ -16,6 +16,7 @@ class App extends Component {
       username: "",
       month: (dateObj.getMonth() + 1),
       day: (dateObj.getDate()),
+      numDays: 0,
       timeStamps: [],
       tracks: [],
       filteredTracks: []
@@ -68,9 +69,37 @@ class App extends Component {
   handleMonthChange = event => {
     event.preventDefault();
     let myMonth = event.target.value;
+    let numberDays = 0;
+    switch (myMonth) {
+      case "1":
+      case "3":
+      case "5":
+      case "7":
+      case "8":
+      case "10":
+      case "12":
+        numberDays = 31;
+        break;
+      case "2":
+        numberDays = 29;
+        break;
+      case "4":
+      case "6":
+      case "9":
+      case "11":
+        numberDays = 30;
+        break;
+    }
+    console.log("Month is " + myMonth)
+    console.log("Number of days is " + numberDays);
+    this.setState({ numDays: numberDays })
+
     this.setState({ tracks: [] })
     this.setState({ month: myMonth });
     this.setState({ timeStamps: rangeStamper(myMonth, this.state.day) });
+
+
+
   }
 
   handleDayChange = event => {
@@ -111,7 +140,7 @@ class App extends Component {
 
         </div>
 
-        <DatePicker month={this.state.month} day={this.state.day} monthChange={this.handleMonthChange} dayChange={this.handleDayChange} submit={this.handleSubmit} username={this.state.username} />
+        <DatePicker month={this.state.month} day={this.state.day} monthChange={this.handleMonthChange} dayChange={this.handleDayChange} submit={this.handleSubmit} username={this.state.username} numDays={this.state.numDays} />
       </div>
     );
   }
