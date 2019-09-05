@@ -9,6 +9,7 @@ export default function timeStamper(thisMonth, thisDay) {
   let day = (thisDay).toString();
   for (year; year > 2000; year - 1) {
     datum = (Date.parse(month + "/" + day + "/" + year));
+    console.log(datum);
     yearArray.push(year);
     console.log(yearArray);
     year -= 1;

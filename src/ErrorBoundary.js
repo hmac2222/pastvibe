@@ -16,7 +16,8 @@ class ErrorBoundary extends React.Component {
     render() {
         if (this.state.hasError) {
             // You can render any custom fallback UI
-            return <h1>Something went wrong.</h1>;
+            return <><h1>Something went wrong.</h1>
+                <h3>Last.fm API is quite rate-limited so if you get an error, please try again in 5 minutes</h3></>;
         }
         return this.props.children;
     }
