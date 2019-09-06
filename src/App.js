@@ -118,6 +118,7 @@ class App extends Component {
         <div className="header">
           <h1>Pastvibe</h1>
         </div>
+        <h4 className="subheader">Listen to the music you played "on this day" over the years using your Last.fm scrobbled history:</h4>
         <div className="user-search">
           <form onSubmit={this.handleSubmit}>
             <input

@@ -1,8 +1,10 @@
-$background: #01161E;
-$highlight: #031C26 ;
-$alt-high: #598392;
-$cool: #aec3b0;
-$light: #eff6e0;
+$background: #000;
+$foreground1: #070707;
+$foreground2: #0a0a0a;
+$greylight: #121212;
+$primary: #D7263D;
+$secondary: #0f0f0f;
+$trinary: #282F44;
 
 html {
   background-color: $background;
@@ -15,8 +17,15 @@ html {
   text-align: center;
 
   .header {
-    font-family: 'Roboto';
-    color: $light;
+    font-family: 'Oswald';
+    color: $primary;
+    font-size: 28px;
+  }
+
+  .subheader {
+    margin-top: -30px;
+    font-family: 'Roboto Slab';
+    color: white;
   }
 
 .picker {
@@ -25,9 +34,10 @@ html {
   font-family: 'Roboto Slab';
   font-size: 24px;
   height: 52px;
-  background-color: $background;
   color: white;
   border-radius: 0;
+  border: 2px solid $secondary;
+  background: $background;
 }
 
 #month-picker {
@@ -40,34 +50,37 @@ html {
     height: 52px;
     background-color: $background;
     color: white;
-    border: 1px solid $cool;
+    border: 2px solid $secondary;
     font-size: 24px;
 
     &:focus {
       outline: none;
 
     &:hover {
-      border: 1px solid $light;
+      border: 2px solid $greylight;
     }
     }
   }
 
   #submit-button {
-    font-family: 'Roboto';
+    font-family: 'Roboto Slab';
     font-weight: bold;
-    color: $background;
+    font-size: 24px;
+    color: white;
     vertical-align: top;
+    padding: 9px 18px;
+    height: 58px;
     margin-left: 10px;
-    height: 56px;
-    background-color: $cool;
-    border: 1px solid $cool;
+    background-color: $background;
+    border: 2px solid $foreground1;
 
     &:focus {
       outline: none;
     }
 
     &:hover {
-      background-color: $light;
+      background-color: $greylight;
+      border: 2px solid $greylight;
     }
   }
 
@@ -77,17 +90,23 @@ html {
   padding-left: 0px;
   max-width: 90%;
   width: 700px;
-  border: 1px solid $cool;
-  color: white;
+  background: $foreground1;
+  border: 2px solid $greylight;
+  color: rgba(255,255,255,.85);
   font-family: 'Roboto';
   overflow: scroll;
   ul {
     list-style-type: none;
     text-align: left;
+    margin: 0;
+    padding-top: 0px;
     padding-left: 0px;
     li {
-        border-bottom: 1px solid $cool;
+        padding: 2px 4px;
 
+    }
+    li:nth-child(odd) {
+      background: $foreground2;
     }
   }
 
@@ -117,7 +136,7 @@ html {
 }
 
 li.track-item:hover {
-  background-color: $highlight;
+  background-color: $secondary;
 }
 
 }
