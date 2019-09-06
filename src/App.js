@@ -16,7 +16,7 @@ class App extends Component {
       username: "",
       month: (dateObj.getMonth() + 1),
       day: (dateObj.getDate()),
-      numDays: 0,
+      numDays: 31,
       timeStamps: [],
       tracks: [],
       filteredTracks: []
