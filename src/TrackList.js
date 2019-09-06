@@ -33,9 +33,16 @@ class TrackList extends Component {
     }
 
     timeZoneFixer = (dateText) => {
-        let utcDate = Date.parse((dateText + "UTC"));
+        let utcDate = Date.parse((dateText + " UTC"));
         var localDate = new Date(utcDate);
-        return Date.parse(localDate);
+        var newLocalDate = localDate.toLocaleDateString(undefined, {
+            day: 'numeric',
+            month: 'short',
+            year: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric'
+        })
+        return newLocalDate;
     }
 
     render() {
