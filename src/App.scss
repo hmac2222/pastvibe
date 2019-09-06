@@ -62,7 +62,7 @@ background-size: 16px 48px;
       outline: none;
 
     &:hover {
-      border: 2px solid $greylight;
+      border: 2px solid $primary;
     }
     }
   }
@@ -85,7 +85,7 @@ background-size: 16px 48px;
 
     &:hover {
       background-color: $greylight;
-      border: 2px solid $greylight;
+      border: 2px solid $primary;
     }
   }
 
@@ -95,6 +95,7 @@ background-size: 16px 48px;
   padding-left: 0px;
   max-width: 90%;
   width: 800px;
+  opacity: 80%;
   background: $foreground1;
   border: 2px solid $foreground1;
   color: rgba(255,255,255,.85);
@@ -148,10 +149,18 @@ li.track-item:hover {
 
   #another-day {
     margin-top: 10px;
-    font-family: 'Roboto';
+    font-family: 'Roboto Slab';
     color: white;
   }
 
+}
+
+.picker {
+  outline: none;
+}
+
+.picker:hover {
+  border: 2px solid $primary;
 }
 
 @media screen and (max-width: 600px) {
