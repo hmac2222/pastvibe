@@ -100,7 +100,8 @@ background-size: 16px 48px;
   border: 2px solid $foreground1;
   color: rgba(255,255,255,.85);
   font-family: 'Roboto';
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
   ul {
     list-style-type: none;
     text-align: left;
