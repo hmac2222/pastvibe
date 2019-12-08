@@ -100,7 +100,6 @@ background-size: 16px 48px;
   color: rgba(255,255,255,.85);
   font-family: 'Roboto';
   overflow-x: hidden;
-  overflow-y: scroll;
   ul {
     list-style-type: none;
     text-align: left;
@@ -138,6 +137,7 @@ background-size: 16px 48px;
     text-align: left;
     margin-top: 7px;
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 }
 
