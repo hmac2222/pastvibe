@@ -1,3 +1,3 @@
-let spotifyApi = new SpotifyWebApi();
+let spotifyApi = new SpotifyWebApi()
 
 spotifyApi.setAccessToken('')

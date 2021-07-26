@@ -2,21 +2,24 @@ $background: #000;
 $foreground1: #070707;
 $foreground2: #0a0a0a;
 $greylight: #121212;
-$primary: #D7263D;
+$primary: #d7263d;
 $secondary: #0f0f0f;
-$trinary: #282F44;
+$trinary: #282f44;
 
 html {
-  background:
-linear-gradient(63deg, #121212 23%, transparent 23%) 7px 0,
-linear-gradient(63deg, transparent 74%, #121212 78%),
-linear-gradient(63deg, transparent 34%, #121212 38%, #121212 58%, transparent 62%),
-#0d0d0d;
-background-size: 16px 48px;
+  background: linear-gradient(63deg, #121212 23%, transparent 23%) 7px 0,
+    linear-gradient(63deg, transparent 74%, #121212 78%),
+    linear-gradient(
+      63deg,
+      transparent 34%,
+      #121212 38%,
+      #121212 58%,
+      transparent 62%
+    ),
+    #0d0d0d;
+  background-size: 16px 48px;
   font-size: 14px;
 }
-
-
 
 .App {
   text-align: center;
@@ -33,22 +36,22 @@ background-size: 16px 48px;
     color: white;
   }
 
-.picker {
-  margin-top: 4px;
-  margin-left: 4px;
-  font-family: 'Roboto Slab';
-  font-size: 24px;
-  height: 52px;
-  color: white;
-  border-radius: 0;
-  border: 2px solid $secondary;
-  background: $background;
-}
+  .picker {
+    margin-top: 4px;
+    margin-left: 4px;
+    font-family: 'Roboto Slab';
+    font-size: 24px;
+    height: 52px;
+    color: white;
+    border-radius: 0;
+    border: 2px solid $secondary;
+    background: $background;
+  }
 
-#month-picker {
-  width: 160px;
-  border-radius: 0px;
-}
+  #month-picker {
+    width: 160px;
+    border-radius: 0px;
+  }
 
   .search-bar {
     font-family: 'Roboto Slab';
@@ -61,9 +64,9 @@ background-size: 16px 48px;
     &:focus {
       outline: none;
 
-    &:hover {
-      border: 2px solid $primary;
-    }
+      &:hover {
+        border: 2px solid $primary;
+      }
     }
   }
 
@@ -89,70 +92,67 @@ background-size: 16px 48px;
     }
   }
 
-#track-wrapper {
-  margin: auto;
-  margin-top: 40px;
-  padding-left: 0px;
-  max-width: 90%;
-  width: 800px;
-  background: $foreground1;
-  border: 2px solid $foreground1;
-  color: rgba(255,255,255,.85);
-  font-family: 'Roboto';
-  overflow-x: hidden;
-  ul {
-    list-style-type: none;
-    text-align: left;
-    margin: 0;
-    padding-top: 0px;
+  #track-wrapper {
+    margin: auto;
+    margin-top: 40px;
     padding-left: 0px;
-    li {
-        padding: 2px 4px;
-
-    }
-    li:nth-child(odd) {
-      background: $foreground2;
-    }
-  }
-
-.track-item {
-  height: 36px;
-  display: grid;
-  grid-template-columns: 6px 50px 150px auto;
-  img {
-    vertical-align: top;
-    grid-column-start: 2;
-    grid-column-end: 3;
-  }
-  .track-date {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    margin-top: 7px;
-  }
-  .track-text {
-    grid-row-start: 1;
-    grid-column-start: 4;
-    grid-column-end: 5;
-    text-align: left;
-    margin-top: 7px;
+    max-width: 90%;
+    width: 800px;
+    background: $foreground1;
+    border: 2px solid $foreground1;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Roboto';
     overflow-x: hidden;
-    overflow-y: hidden;
+    ul {
+      list-style-type: none;
+      text-align: left;
+      margin: 0;
+      padding-top: 0px;
+      padding-left: 0px;
+      li {
+        padding: 2px 4px;
+      }
+      li:nth-child(odd) {
+        background: $foreground2;
+      }
+    }
+
+    .track-item {
+      height: 36px;
+      display: grid;
+      grid-template-columns: 6px 50px 150px auto;
+      img {
+        vertical-align: top;
+        grid-column-start: 2;
+        grid-column-end: 3;
+      }
+      .track-date {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        margin-top: 7px;
+      }
+      .track-text {
+        grid-row-start: 1;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        text-align: left;
+        margin-top: 7px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+    }
+
+    li.track-item:hover {
+      background-color: $secondary;
+    }
   }
-}
-
-li.track-item:hover {
-  background-color: $secondary;
-}
-
-}
 
   #another-day {
     margin-top: 10px;
     font-family: 'Roboto Slab';
     color: white;
   }
-
 }
 
 .picker {
