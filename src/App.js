@@ -8,7 +8,6 @@ import DatePicker from './components/DatePicker'
 class App extends Component {
   constructor(props) {
     let dateObj = new Date()
-    console.log(dateObj.getMonth() + 1)
 
     super(props)
     this.state = {
@@ -32,13 +31,11 @@ class App extends Component {
     // Display fallback UI
     this.setState({ hasError: true })
     // You can also log the error to an error reporting service
-    console.log(error, info)
+    console.error(error, info)
   }
 
   handleChange(event) {
-    console.log(rangeStamper(this.state.month, this.state.day))
     this.setState({ username: event.target.value })
-    console.log('this.state.username was set:' + this.state.username)
     this.setState({
       timeStamps: rangeStamper(this.state.month, this.state.day)
     })
@@ -46,7 +43,6 @@ class App extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    console.log('Button Clicked!')
     this.setState({ tracks: [] })
     let url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${this.state.username}&api_key=6c81046f1210891db3f2f16a73a893c7&format=json`
     for (let i = 0; i < this.state.timeStamps.length; i++) {
@@ -58,16 +54,14 @@ class App extends Component {
           (this.state.timeStamps[i] + 86400)
       )
         .then((res) => {
-          console.log('reached out')
           return res.json()
         })
         .then((data) => {
-          console.log('tracks added')
           let joined = this.state.tracks.concat(data.recenttracks)
           this.setState({ tracks: joined })
         })
         .catch((error) => {
-          console.log(error)
+          console.error(error)
         })
     }
   }
@@ -96,8 +90,6 @@ class App extends Component {
         numberDays = 30
         break
     }
-    console.log('Month is ' + myMonth)
-    console.log('Number of days is ' + numberDays)
     this.setState({ numDays: numberDays })
 
     this.setState({ tracks: [] })
