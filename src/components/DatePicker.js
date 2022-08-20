@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 
 export default class DatePicker extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   render() {
     const dates = []
@@ -24,18 +21,18 @@ export default class DatePicker extends Component {
             value={this.props.month}
             onChange={this.props.monthChange}
           >
-            <option value="1">Jan</option>
-            <option value="2">Feb</option>
-            <option value="3">Mar</option>
-            <option value="4">Apr</option>
-            <option value="5">May</option>
-            <option value="6">Jun</option>
-            <option value="7">Jul</option>
-            <option value="8">Aug</option>
-            <option value="9">Sep</option>
-            <option value="10">Oct</option>
-            <option value="11">Nov</option>
-            <option value="12">Dec</option>
+            <option key="1" value="1">Jan</option>
+            <option key= "2" value="2">Feb</option>
+            <option key= "3" value="3">Mar</option>
+            <option key= "4" value="4">Apr</option>
+            <option key= "5" value="5">May</option>
+            <option key= "6" value="6">Jun</option>
+            <option key= "7" value="7">Jul</option>
+            <option key= "8" value="8">Aug</option>
+            <option key= "9" value="9">Sep</option>
+            <option key= "10" value="10">Oct</option>
+            <option key= "11" value="11">Nov</option>
+            <option key= "12" value="12">Dec</option>
           </select>
           <select
             className="picker"
@@ -45,8 +42,8 @@ export default class DatePicker extends Component {
             value={this.props.day}
             onChange={this.props.dayChange}
           >
-            {dates.map((date) => {
-              return <option value={date}>{date}</option>
+            {dates.map((date, index) => {
+              return <option key={index} value={date}>{date}</option>
             })}
           </select>
           <input id="submit-button" type="submit" value="Submit" />

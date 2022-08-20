@@ -6,7 +6,7 @@ class TrackItem extends Component {
     return (
       <li className="track-item">
         <div className="track-date">{this.props.date}</div>
-        <img height="36px" src={this.props.image} />
+        <img height="36px" alt="album art" src={this.props.image} />
         <div className="track-text">
           {this.props.artist} - {this.props.name}
         </div>

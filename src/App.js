@@ -89,6 +89,9 @@ class App extends Component {
       case '11':
         numberDays = 30
         break
+      default:
+        numberDays = 0
+        break
     }
     this.setState({ numDays: numberDays })
 

@@ -64,9 +64,10 @@ class TrackList extends Component {
       <>
         {/* }<h1>{this.state.numberOftracks} tracks! </h1> */}
         <ul className="track-list">
-          {result.map((track) => {
+          {result.map((track, index) => {
             return (
               <TrackItem
+                key={index}
                 image={track.image[1]['#text']}
                 date={this.timeZoneFixer(track.date['#text'])}
                 artist={track.artist['#text']}
